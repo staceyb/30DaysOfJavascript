@@ -1,4 +1,4 @@
-html {
+6html {
   box-sizing: border-box;
 }
 
@@ -54,6 +54,19 @@ body {
   max-width:50px;
 }
 
+.timer {
+  background:none;
+  border:0;
+  line-height:1;
+  color:white;
+  text-align: center;
+  outline:0;
+  padding: 0;
+  max-width:50px;
+  font-size: 11px;
+  margin-top: 10px;
+}
+
 .player__button:focus {
   border-color: #ffc600;
 }
@@ -98,7 +111,6 @@ body {
 }
 
 .progress__filled {
-  width:50%;
   background:#ffc600;
   flex:0;
   flex-basis:50%;

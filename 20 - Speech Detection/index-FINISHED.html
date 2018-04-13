@@ -26,6 +26,10 @@
       .map(result => result.transcript)
       .join('');
 
+      if (transcript.includes('unicorn')) {
+        console.log('🦄🦄🦄🦄🦄🦄🦄🦄')
+      }
+
       const poopScript = transcript.replace(/poop|poo|shit|dump/gi, '💩');
       p.textContent = poopScript;
 

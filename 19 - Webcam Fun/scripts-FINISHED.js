@@ -27,12 +27,12 @@ function paintToCanvas() {
     // take the pixels out
     let pixels = ctx.getImageData(0, 0, width, height);
     // mess with them
-    // pixels = redEffect(pixels);
+    //pixels = redEffect(pixels);
 
-    pixels = rgbSplit(pixels);
-    // ctx.globalAlpha = 0.8;
+   // pixels = rgbSplit(pixels);
+    //ctx.globalAlpha = 0.8;
 
-    // pixels = greenScreen(pixels);
+    pixels = greenScreen(pixels);
     // put them back
     ctx.putImageData(pixels, 0, 0);
   }, 16);
@@ -48,8 +48,9 @@ function takePhoto() {
   const link = document.createElement('a');
   link.href = data;
   link.setAttribute('download', 'handsome');
-  link.innerHTML = `<img src="${data}" alt="Handsome Man" />`;
-  strip.insertBefore(link, strip.firsChild);
+  link.innerHTML = `<img src="${data}" alt="Handsome Man" />Download Image`;
+  //link.textContent= 'Download Image';
+  strip.insertBefore(link, strip.firstChild);
 }
 
 function redEffect(pixels) {
